@@ -31,6 +31,26 @@
             </div>
         </div>
 
+        <div class="form-group">
+            <label for="inputAddress" class="col-sm-2 col-lg-offset-3 col-lg-2 control-label">Address</label>
+            <div class="col-sm-10 col-lg-4">
+                <textarea rows="2" class="form-control" id="inputAddress" placeholder="Address" required></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inputCity" class="col-sm-2 col-lg-offset-3 col-lg-2 control-label">City</label>
+            <div class="col-sm-10 col-lg-4">
+                <input type="text" class="form-control" id="inputCity" placeholder="City" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inputPin" class="col-sm-2 col-lg-offset-3 col-lg-2 control-label">Pin</label>
+            <div class="col-sm-10 col-lg-4">
+                <input type="text" class="form-control" pattern="[0-9]{6}" maxlength="6" id="inputPin" placeholder="Pin" required>
+            </div>
+        </div>
 
         <div class="form-group">
             <label for="Event_Category"  class="col-sm-2 col-lg-offset-3 col-lg-2 control-label">Event Category</label>
@@ -56,10 +76,10 @@
             <div class="col-sm-10 col-lg-6">
                 <small>(Come for minimum of 1.5 hours within these time-slots)</small>
                 <div class="radio">
-                    <label><input type="radio" name="optradio">Between 7:30 am - 12:30 pm</label>
+                    <label><input type="radio" name="time">Between 7:30 am - 12:30 pm</label>
                 </div>
                 <div class="radio">
-                    <label><input type="radio" name="optradio"> Between 12:30 pm - 5:30 pm</label>
+                    <label><input type="radio" name="time"> Between 12:30 pm - 5:30 pm</label>
                 </div>
             </div>
         </div>
@@ -70,28 +90,27 @@
             <div class="col-sm-10 col-lg-7" id="check">
                 <div>
                     Day 1 :
-                        <label class="radio-inline"><input type="radio" name="day1">Sun</label>
-                        <label class="radio-inline"><input type="radio" name="day1">Mon</label>
-                        <label class="radio-inline"><input type="radio" name="day1">Tue</label>
-                        <label class="radio-inline"><input type="radio" name="day1">Wed</label>
-                        <label class="radio-inline"><input type="radio" name="day1">Thur</label>
-                        <label class="radio-inline"><input type="radio" name="day1">Fri</label>
-                        <label class="radio-inline"><input type="radio" name="day1">Sat</label>
+                    <label class="radio-inline"><input type="radio" name="day1">Sun</label>
+                    <label class="radio-inline"><input type="radio" name="day1">Mon</label>
+                    <label class="radio-inline"><input type="radio" name="day1">Tue</label>
+                    <label class="radio-inline"><input type="radio" name="day1">Wed</label>
+                    <label class="radio-inline"><input type="radio" name="day1">Thur</label>
+                    <label class="radio-inline"><input type="radio" name="day1">Fri</label>
+                    <label class="radio-inline"><input type="radio" name="day1">Sat</label>
                 </div>
                 <br>
                 <div>
                     Day 2 :
-                        <label class="radio-inline"><input type="radio" name="day2">Sun</label>
-                        <label class="radio-inline"><input type="radio" name="day2">Mon</label>
-                        <label class="radio-inline"><input type="radio" name="day2">Tue</label>
-                        <label class="radio-inline"><input type="radio" name="day2">Wed</label>
-                        <label class="radio-inline"><input type="radio" name="day2">Thur</label>
-                        <label class="radio-inline"><input type="radio" name="day2">Fri</label>
-                        <label class="radio-inline"><input type="radio" name="day2">Sat</label>
+                    <label class="radio-inline"><input type="radio" name="day2">Sun</label>
+                    <label class="radio-inline"><input type="radio" name="day2">Mon</label>
+                    <label class="radio-inline"><input type="radio" name="day2">Tue</label>
+                    <label class="radio-inline"><input type="radio" name="day2">Wed</label>
+                    <label class="radio-inline"><input type="radio" name="day2">Thur</label>
+                    <label class="radio-inline"><input type="radio" name="day2">Fri</label>
+                    <label class="radio-inline"><input type="radio" name="day2">Sat</label>
                 </div>
             </div>
         </div>
-
 
         <div class="form-group">
             <label class="col-sm-2 col-lg-offset-3 col-lg-2 control-label">Would you like to volunteer for more days?</label>
@@ -101,38 +120,15 @@
             </div>
         </div>
 
-
-
-        <div class="form-group">
-            <label for="inputAddress" class="col-sm-2 col-lg-offset-3 col-lg-2 control-label">Address</label>
-            <div class="col-sm-10 col-lg-4">
-                <textarea rows="2" class="form-control" id="inputAddress" placeholder="Address" required></textarea>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="inputCity" class="col-sm-2 col-lg-offset-3 col-lg-2 control-label">City</label>
-            <div class="col-sm-10 col-lg-4">
-                <input type="text" class="form-control" id="inputCity" placeholder="City" required>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label for="inputPin" class="col-sm-2 col-lg-offset-3 col-lg-2 control-label">Pin</label>
-            <div class="col-sm-10 col-lg-4">
-                <input type="text" class="form-control" pattern="[0-9]{6}" maxlength="6" id="inputPin" placeholder="Pin" required>
-            </div>
-        </div>
-
         <div class="form-group">
             <div >
                     <label for="inputDateFrom" class="col-sm-2 col-lg-offset-3 col-lg-2 control-label">Date From </label>
                     <div class="col-sm-10 col-lg-4">
-                        <input type="datetime-local" class="form-control" id="inputDateFrom" required>
+                        <input type="date" class="form-control" id="inputDateFrom" required>
                     </div>
                     <label for="inputDateTo" class="col-sm-2 col-lg-offset-3 col-lg-2 control-label">Date To </label>
                     <div class="col-sm-10 col-lg-4">
-                        <input type="datetime-local" class="form-control" id="inputDateTo" required>
+                        <input type="date" class="form-control" id="inputDateTo" required>
                     </div>
             </div>
         </div>
