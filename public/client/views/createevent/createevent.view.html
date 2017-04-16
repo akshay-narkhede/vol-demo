@@ -1,0 +1,148 @@
+<script>
+    $(':checkbox[name=check]').on('click',function(){
+
+        var checkedBoxlength=$(':checkbox[name=check]:checked').length;
+        if(checkedBoxlength>2){
+            alert('You can check a maximum of 2 boxes.');
+            return false;
+        }
+    });
+</script>
+
+<div ng-controller="CreateEventController">
+    <form class="form-horizontal col-xs-offset-1 col-xs-10">
+        <div class="text-center color-elements" style="padding-bottom: 30px">
+            <h2>Create New Volunteer Event</h2>
+        </div>
+        <div class="col-sm-offset-2 col-lg-offset-2 col-sm-10"></div>
+
+
+        <div class="form-group">
+            <label for="inputName" class="col-sm-2 col-lg-offset-3 col-lg-2 control-label">Name</label>
+            <div class="col-sm-10 col-lg-4">
+                <input type="text" class="form-control" id="inputName" placeholder="Name" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inputEmail" class="col-sm-2 col-lg-offset-3 col-lg-2 control-label">Email</label>
+            <div class="col-sm-10 col-lg-4">
+                <input type="text" class="form-control" id="inputEmail" placeholder="Email" required>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="Event_Category"  class="col-sm-2 col-lg-offset-3 col-lg-2 control-label">Event Category</label>
+            <div class="col-sm-10 col-lg-4">
+                <select class="form-control" style="width: 90%" id="Event_Category" required>
+                    <option selected disabled hidden>Select Option</option>
+                    <option value="arts">Arts</option>
+                    <option value="administrative">Administrative/Office Work</option>
+                    <option value="coaching">Coaching/Outdoor Activities</option>
+                    <option value="education">Education</option>
+                    <option value="eventhandiling">Event handling</option>
+                    <option value="fundraising">Fund-raising</option>
+                    <option value="mentoring">Mentoring</option>
+                    <option value="shows">Shows</option>
+                    <option value="socialmedia">Social media</option>
+                    <option value="youthwork">Youth Work</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 col-lg-offset-3 col-lg-2 control-label">What time slot would work best for you?</label>
+            <div class="col-sm-10 col-lg-6">
+                <small>(Come for minimum of 1.5 hours within these time-slots)</small>
+                <div class="radio">
+                    <label><input type="radio" name="optradio">Between 7:30 am - 12:30 pm</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="optradio"> Between 12:30 pm - 5:30 pm</label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="col-sm-2 col-lg-offset-3 col-lg-2 control-label">Which days of the week would you like to volunteer?</label>
+            <div class="col-sm-10 col-lg-7" id="check">
+                <div>
+                    Day 1 :
+                        <label class="radio-inline"><input type="radio" name="day1">Sun</label>
+                        <label class="radio-inline"><input type="radio" name="day1">Mon</label>
+                        <label class="radio-inline"><input type="radio" name="day1">Tue</label>
+                        <label class="radio-inline"><input type="radio" name="day1">Wed</label>
+                        <label class="radio-inline"><input type="radio" name="day1">Thur</label>
+                        <label class="radio-inline"><input type="radio" name="day1">Fri</label>
+                        <label class="radio-inline"><input type="radio" name="day1">Sat</label>
+                </div>
+                <br>
+                <div>
+                    Day 2 :
+                        <label class="radio-inline"><input type="radio" name="day2">Sun</label>
+                        <label class="radio-inline"><input type="radio" name="day2">Mon</label>
+                        <label class="radio-inline"><input type="radio" name="day2">Tue</label>
+                        <label class="radio-inline"><input type="radio" name="day2">Wed</label>
+                        <label class="radio-inline"><input type="radio" name="day2">Thur</label>
+                        <label class="radio-inline"><input type="radio" name="day2">Fri</label>
+                        <label class="radio-inline"><input type="radio" name="day2">Sat</label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="col-sm-2 col-lg-offset-3 col-lg-2 control-label">Would you like to volunteer for more days?</label>
+            <div class="col-sm-10 col-lg-4">
+                <label class="radio-inline"><input type="radio" name="more">Yes</label>
+                <label class="radio-inline"><input type="radio" name="more">No</label>
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="inputAddress" class="col-sm-2 col-lg-offset-3 col-lg-2 control-label">Address</label>
+            <div class="col-sm-10 col-lg-4">
+                <textarea rows="2" class="form-control" id="inputAddress" placeholder="Address" required></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inputCity" class="col-sm-2 col-lg-offset-3 col-lg-2 control-label">City</label>
+            <div class="col-sm-10 col-lg-4">
+                <input type="text" class="form-control" id="inputCity" placeholder="City" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inputPin" class="col-sm-2 col-lg-offset-3 col-lg-2 control-label">Pin</label>
+            <div class="col-sm-10 col-lg-4">
+                <input type="text" class="form-control" pattern="[0-9]{6}" maxlength="6" id="inputPin" placeholder="Pin" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div >
+                    <label for="inputDateFrom" class="col-sm-2 col-lg-offset-3 col-lg-2 control-label">Date From </label>
+                    <div class="col-sm-10 col-lg-4">
+                        <input type="datetime-local" class="form-control" id="inputDateFrom" required>
+                    </div>
+                    <label for="inputDateTo" class="col-sm-2 col-lg-offset-3 col-lg-2 control-label">Date To </label>
+                    <div class="col-sm-10 col-lg-4">
+                        <input type="datetime-local" class="form-control" id="inputDateTo" required>
+                    </div>
+            </div>
+        </div>
+
+
+
+        <div class="form-group" style="margin: 15px">
+            <div class="col-sm-offset-2 col-lg-offset-5 col-sm-10 col-lg-4">
+                <a class="btn btn-xl" ng-click="model.createEvent()">Submit</a>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,37 @@
+<style>
+    input[type=text] {
+        width:100%;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 24px;
+        background-color: white;
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 20px;
+
+    }
+
+    input[type=text]:focus {
+    }
+</style>
+
+<div ng-controller="SearchEventController">
+    <form class="form-horizontal col-xs-offset-1 col-xs-10">
+        <center>
+        <div class="text-center color-elements" style="padding-bottom: 30px">
+            <h2>Search Volunteer Event</h2>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+                <input type="text" name="search" placeholder="Search.." >
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-lg-offset-4 col-sm-8 col-lg-4">
+                <a class="btn btn-xl" ng-click="model.searchEvent()">Search!</a>
+            </div>
+        </div>
+        </center>
+    </form>
+</div>
